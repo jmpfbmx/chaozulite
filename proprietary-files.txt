@@ -127,7 +127,7 @@ vendor/lib/libmmcamera_tuning_lookup.so
 vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_ubifocus_lib.so
 vendor/lib/libmmcamera_ov5675.so
-vendor/lib/libmmcamera_s5k3p3.so
+vendor/lib/libmmcamera_ov8856.so
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_dcrf.so
@@ -164,7 +164,7 @@ vendor/lib/libts_face_beautify_hal.so
 vendor/lib/libubifocus.so
 
 # Camera actuators
-vendor/lib/libactuator_bu64297.so
+vendor/lib/libactuator_dw9714.so
 
 # Camera chromatix
 vendor/lib/libchromatix_ov5675_d5v15b_default_video_3a.so
@@ -190,41 +190,31 @@ vendor/lib/libchromatix_ov5675_d5v15b_hfr_120.so
 vendor/lib/libchromatix_ov5675_d5v15b_cpp_hfr_90.so
 vendor/lib/libchromatix_ov5675_d5v15b_hfr_90.so
 vendor/lib/libchromatix_ov5675_d5v15b_default_video.so
-vendor/lib/libchromatix_s5k3p3_preview.so
-vendor/lib/libchromatix_s5k3p3_cpp_hfr_60.so
-vendor/lib/libchromatix_s5k3p3_default_video.so
-vendor/lib/libchromatix_s5k3p3_hfr_90_dw9800.so
-vendor/lib/libchromatix_s5k3p3_common.so
-vendor/lib/libchromatix_s5k3p3_default_video_dw9800.so
-vendor/lib/libchromatix_s5k3p3_snapshot.so
-vendor/lib/libchromatix_s5k3p3_cpp_hfr_120.so
-vendor/lib/libchromatix_s5k3p3_cpp_liveshot.so
-vendor/lib/libchromatix_s5k3p3_zsl_preview_dw9800.so
-vendor/lib/libchromatix_s5k3p3_hfr_60_dw9800.so
-vendor/lib/libchromatix_s5k3p3_cpp_video.so
-vendor/lib/libchromatix_s5k3p3_hfr_90.so
-vendor/lib/libchromatix_s5k3p3_hfr_60.so
-vendor/lib/libchromatix_s5k3p3_default_preview_dw9800.so
-vendor/lib/libchromatix_s5k3p3_cpp_hfr_90.so
-vendor/lib/libchromatix_s5k3p3_postproc.so
-vendor/lib/libchromatix_s5k3p3_cpp_snapshot.so
-vendor/lib/libchromatix_s5k3p3_cpp_preview.so
-vendor/lib/libchromatix_s5k3p3_zsl_video_dw9800.so
-vendor/lib/libchromatix_s5k3p3_hfr_120.so
-vendor/lib/libchromatix_s5k3p3_hfr_120_dw9800.so
-vendor/lib/libchromatix_s5k3p3sm_common.so
-vendor/lib/libchromatix_s5k3p3sm_cpp_liveshot.so
-vendor/lib/libchromatix_s5k3p3sm_cpp_preview.so
-vendor/lib/libchromatix_s5k3p3sm_cpp_snapshot.so
-vendor/lib/libchromatix_s5k3p3sm_cpp_video.so
-vendor/lib/libchromatix_s5k3p3sm_default_preview_3a.so
-vendor/lib/libchromatix_s5k3p3sm_default_video.so
-vendor/lib/libchromatix_s5k3p3sm_default_video_3a.so
-vendor/lib/libchromatix_s5k3p3sm_fullsize_preview_3a.so
-vendor/lib/libchromatix_s5k3p3sm_fullsize_video_3a.so
-vendor/lib/libchromatix_s5k3p3sm_postproc.so
-vendor/lib/libchromatix_s5k3p3sm_preview.so
-vendor/lib/libchromatix_s5k3p3sm_snapshot.so
+vendor/lib/libchromatix_ov8856_a3_default_preview.so
+vendor/lib/libchromatix_ov8856_a3_default_video.so
+vendor/lib/libchromatix_ov8856_a3_hfr_120.so
+vendor/lib/libchromatix_ov8856_a3_hfr_60.so
+vendor/lib/libchromatix_ov8856_a3_hfr_90.so
+vendor/lib/libchromatix_ov8856_common.so
+vendor/lib/libchromatix_ov8856_cpp_ds_chromatix.so
+vendor/lib/libchromatix_ov8856_cpp_hfr_120.so
+vendor/lib/libchromatix_ov8856_cpp_hfr_60.so
+vendor/lib/libchromatix_ov8856_cpp_hfr_90.so
+vendor/lib/libchromatix_ov8856_cpp_liveshot.so
+vendor/lib/libchromatix_ov8856_cpp_preview.so
+vendor/lib/libchromatix_ov8856_cpp_snapshot.so
+vendor/lib/libchromatix_ov8856_cpp_us_chromatix.so
+vendor/lib/libchromatix_ov8856_cpp_video.so
+vendor/lib/libchromatix_ov8856_default_video.so
+vendor/lib/libchromatix_ov8856_hfr_120.so
+vendor/lib/libchromatix_ov8856_hfr_60.so
+vendor/lib/libchromatix_ov8856_hfr_90.so
+vendor/lib/libchromatix_ov8856_liveshot.so
+vendor/lib/libchromatix_ov8856_postproc.so
+vendor/lib/libchromatix_ov8856_preview.so
+vendor/lib/libchromatix_ov8856_snapshot.so
+vendor/lib/libchromatix_ov8856_zsl_preview.so
+vendor/lib/libchromatix_ov8856_zsl_video.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
