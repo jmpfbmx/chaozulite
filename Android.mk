@@ -107,32 +107,6 @@ $(CPPF_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(CPPF_SYMLINKS)
 
-FINGERPRINT_IMAGES := \
-    fingerpr.b00 fingerpr.b01 fingerpr.b02 fingerpr.b03 fingerpr.b04 fingerpr.b05 \
-    fingerpr.b06 fingerpr.mdt
-
-FINGERPRINT_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FINGERPRINT_IMAGES)))
-$(FINGERPRINT_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "FINGERPRINT firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(FINGERPRINT_SYMLINKS)
-
-FPCTZAPP_IMAGES := \
-    fpctzapp.b00 fpctzapp.b01 fpctzapp.b02 fpctzapp.b03 fpctzapp.b04 fpctzapp.b05 \
-    fpctzapp.b06 fpctzapp.mdt
-
-FPCTZAPP_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FPCTZAPP_IMAGES)))
-$(FPCTZAPP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "FPCTZAPP firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	@$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(FPCTZAPP_SYMLINKS)
-
 ISDB_IMAGES := \
     isdbtmm.b00 isdbtmm.b01 isdbtmm.b02 isdbtmm.b03 isdbtmm.b04 isdbtmm.b05 \
     isdbtmm.b06 isdbtmm.mdt
