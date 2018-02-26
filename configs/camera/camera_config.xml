@@ -156,7 +156,7 @@ LensInfo : Information of the lens present in the module.
       <VerticalViewAngle>48.5</VerticalViewAngle>
       <MinFocusDistance>0.1</MinFocusDistance>
     </LensInfo>
-   </CameraModuleConfig>
+    </CameraModuleConfig>
     <CameraModuleConfig>
     <CameraId>0</CameraId>
     <SensorName>ov8856</SensorName>
