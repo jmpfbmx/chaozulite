@@ -18,23 +18,23 @@
 # Inherit framework first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from tenshi device
-$(call inherit-product, device/bq/tenshi/device.mk)
+# Inherit from chaozulite device
+$(call inherit-product, device/bq/chaozulite/device.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := bq
-PRODUCT_DEVICE := tenshi
-PRODUCT_NAME := lineage_tenshi
+PRODUCT_DEVICE := chaozulite
+PRODUCT_NAME := lineage_chaozulite
 PRODUCT_BRAND := bq
-PRODUCT_MODEL := Aquaris U Plus
+PRODUCT_MODEL := Aquaris U Lite
 PRODUCT_MANUFACTURER := bq
 
 # Set product device & name
 PRODUCT_BUILD_PROP_OVERRIDES += \
-   PRODUCT_NAME=tenshi
+   PRODUCT_NAME=chaozulite
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -42,5 +42,5 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_GMS_CLIENTID_BASE := android-bq
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=bq/tenshi/tenshi:7.1.1/NMF26F/1513694507:user/release-keys \
-    PRIVATE_BUILD_DESC="tenshi-user 7.1.1 NMF26F 2.5.0_20171219-1539 release-keys"
+    BUILD_FINGERPRINT=bq/chaozulite/chaozulite:7.1.1/NMF26F/1514976657:user/release-keys \
+    PRIVATE_BUILD_DESC="chaozulite-user 7.1.1 NMF26F 2.5.0_20180103-1148 release-keys"

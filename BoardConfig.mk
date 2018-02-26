@@ -15,12 +15,12 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/bq/tenshi
+LOCAL_PATH := device/bq/chaozulite
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := Aquaris_U_Plus,tenshi
+TARGET_OTA_ASSERT_DEVICE := Aquaris_U_Lite,chaozulite
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
@@ -46,7 +46,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 -
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-
-TARGET_KERNEL_CONFIG := lineage_tenshi_defconfig
+TARGET_KERNEL_CONFIG := lineage_chaozulite_defconfig
 TARGET_KERNEL_SOURCE := kernel/bq/msm8937
 
 # Audio
@@ -116,7 +116,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS := device/bq/tenshi/cmhw/src
+BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/src
 
 # CNE
 BOARD_USES_QCNE := true
@@ -228,4 +228,4 @@ WIFI_DRIVER_FW_PATH_STA          := "sta"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/bq/tenshi/BoardConfigVendor.mk
+-include vendor/bq/chaozulite/BoardConfigVendor.mk
