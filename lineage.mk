@@ -42,5 +42,5 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_GMS_CLIENTID_BASE := android-bq
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=bq/chaozulite/chaozulite:7.1.1/NMF26F/1514976657:user/release-keys \
-    PRIVATE_BUILD_DESC="chaozulite-user 7.1.1 NMF26F 2.5.0_20180103-1148 release-keys"
+    BUILD_FINGERPRINT=bq/chaozulite/chaozulite:7.1.1/NMF26F/1109:user/release-keys \
+    PRIVATE_BUILD_DESC="chaozulite-user 7.1.1 NMF26F 1109 release-keys"
