@@ -19,7 +19,6 @@ LOCAL_C_INCLUDES += external/icu/icu4c/source/common
 else
 LOCAL_C_INCLUDES += external/icu4c/common
 endif
-#LOCAL_C_INCLUDES += external/dhcpcd
 LOCAL_C_INCLUDES += external/libxml2/include
 LOCAL_C_INCLUDES += external/libnetfilter_conntrack/include
 LOCAL_C_INCLUDES += external/libnfnetlink/include
@@ -27,10 +26,9 @@ LOCAL_C_INCLUDES += external/libnfnetlink/include
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
-LOCAL_CFLAGS := -v
-LOCAL_CFLAGS += -DFEATURE_IPA_ANDROID
+LOCAL_CFLAGS := -DFEATURE_IPA_ANDROID
 LOCAL_CFLAGS += -DFEATURE_IPACM_HAL -Wall -Werror -Wno-error=macro-redefined
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 LOCAL_CFLAGS += -DDEBUG
 endif
 
@@ -66,7 +64,6 @@ LOCAL_SRC_FILES := IPACM_Main.cpp \
 		IPACM_OffloadManager.cpp
 
 LOCAL_MODULE := ipacm
-LOCAL_CLANG := false
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_SHARED_LIBRARIES := liboffloadhal
@@ -89,22 +86,7 @@ LOCAL_SHARED_LIBRARIES += libhwbinder \
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_EXECUTABLES)
 
-LOCAL_CLANG := true
 include $(BUILD_EXECUTABLE)
-
-################################################################################
-
-define ADD_TEST
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := $1
-LOCAL_SRC_FILES    := $1
-LOCAL_MODULE_CLASS := ipacm
-LOCAL_MODULE_TAGS  := debug
-LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)
-include $(BUILD_PREBUILT)
-
-endef
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := IPACM_cfg.xml
