@@ -176,6 +176,8 @@ TARGET_NO_RPC := true
 
 # HIDL
 TARGET_FS_CONFIG_GEN += $(LOCAL_PATH)/config.fs
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(LOCAL_PATH)/compatibility_matrix.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_bqmsm8937
