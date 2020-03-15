@@ -111,8 +111,8 @@ PRODUCT_PACKAGES += \
     libfmjni
 
 # For android_filesystem_config.h
-PRODUCT_PACKAGES += \
-    fs_config_files
+#PRODUCT_PACKAGES += \
+#    fs_config_files
 
 # GPS
 PRODUCT_PACKAGES += \
