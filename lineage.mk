@@ -24,9 +24,6 @@ $(call inherit-product, device/bq/chaozulite/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Overlays (inherit after vendor/cm to ensure we override it)
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := bq
 PRODUCT_BRAND := bq
@@ -43,4 +40,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
    PRODUCT_NAME=chaozulite \
    PRIVATE_BUILD_DESC="chaozulite-user 7.1.1 NMF26F 1109 release-keys"
 
-BUILD_FINGERPRINT=bq/chaozulite/chaozulite:7.1.1/NMF26F/1109:user/release-keys \
+BUILD_FINGERPRINT := bq/chaozulite/chaozulite:7.1.1/NMF26F/1109:user/release-keys
