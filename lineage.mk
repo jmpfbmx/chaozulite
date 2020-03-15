@@ -22,25 +22,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/bq/chaozulite/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
-# Set those variables here to overwrite the inherited values.
-BOARD_VENDOR := bq
-PRODUCT_DEVICE := chaozulite
-PRODUCT_NAME := lineage_chaozulite
-PRODUCT_BRAND := bq
-PRODUCT_MODEL := Aquaris U Lite
-PRODUCT_MANUFACTURER := bq
-
-# Set product device & name
-PRODUCT_BUILD_PROP_OVERRIDES += \
-   PRODUCT_NAME=chaozulite
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Set those variables here to overwrite the inherited values.
+BOARD_VENDOR := bq
+PRODUCT_BRAND := bq
+PRODUCT_DEVICE := chaozulite
+PRODUCT_NAME := lineage_chaozulite
+PRODUCT_MANUFACTURER := bq
+PRODUCT_MODEL := Aquaris U Lite
+TARGET_VENDOR := bq
+
 PRODUCT_GMS_CLIENTID_BASE := android-bq
 
+# Set product device & name
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=bq/chaozulite/chaozulite:7.1.1/NMF26F/1109:user/release-keys \
-    PRIVATE_BUILD_DESC="chaozulite-user 7.1.1 NMF26F 1109 release-keys"
+   PRODUCT_NAME=chaozulite \
+   PRIVATE_BUILD_DESC="chaozulite-user 7.1.1 NMF26F 1109 release-keys"
+
+BUILD_FINGERPRINT=bq/chaozulite/chaozulite:7.1.1/NMF26F/1109:user/release-keys \
