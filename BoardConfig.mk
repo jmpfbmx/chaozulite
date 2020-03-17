@@ -171,6 +171,9 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USES_MKE2FS := true
 
+# Filesystem Config
+TARGET_FS_CONFIG_GEN := device/bq/chaozulite/config.fs
+
 # FM
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
@@ -181,7 +184,6 @@ USE_DEVICE_SPECIFIC_LOC_API := true
 TARGET_NO_RPC := true
 
 # HIDL
-TARGET_FS_CONFIG_GEN += $(LOCAL_PATH)/config.fs
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(LOCAL_PATH)/compatibility_matrix.xml
 
