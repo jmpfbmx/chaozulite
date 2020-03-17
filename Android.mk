@@ -246,10 +246,4 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS)
 
-ifneq ($(TARGET_PREBUILT_KERNEL),)
-# Some modules (ex. external/tinycompress depend on $(KERNEL_OUT)/usr,
-# but this folder is not created for prebuilt kernel, let'c create it
-$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr:
-	mkdir -p $@
-
 endif
